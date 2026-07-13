@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500" role="img" aria-labelledby="title">
+  <title>Devorux Health</title>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#0f1419"/>
+      <stop offset="100%" stop-color="#171d25"/>
+    </linearGradient>
+    <linearGradient id="accent" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#34d399"/>
+      <stop offset="100%" stop-color="#10b981"/>
+    </linearGradient>
+  </defs>
+  <rect width="800" height="500" fill="url(#bg)"/>
+  <rect x="48" y="42" width="704" height="416" rx="18" fill="#1a222c" stroke="rgba(255,255,255,0.08)"/>
+  <rect x="72" y="68" width="120" height="14" rx="7" fill="url(#accent)" opacity="0.9"/>
+  <rect x="72" y="96" width="280" height="28" rx="8" fill="#fff" opacity="0.92"/>
+  <rect x="72" y="136" width="360" height="14" rx="7" fill="#8b98a8"/>
+  <rect x="72" y="188" width="150" height="42" rx="12" fill="url(#accent)"/>
+  <rect x="236" y="188" width="130" height="42" rx="12" fill="transparent" stroke="rgba(255,255,255,0.18)"/>
+  <rect x="72" y="268" width="200" height="150" rx="16" fill="#121820" stroke="rgba(255,255,255,0.06)"/>
+  <rect x="292" y="268" width="200" height="150" rx="16" fill="#121820" stroke="rgba(255,255,255,0.06)"/>
+  <rect x="512" y="268" width="200" height="150" rx="16" fill="#121820" stroke="rgba(255,255,255,0.06)"/>
+  <circle cx="120" cy="318" r="22" fill="url(#accent)" opacity="0.25"/>
+  <circle cx="340" cy="318" r="22" fill="#60a5fa" opacity="0.25"/>
+  <circle cx="560" cy="318" r="22" fill="#a78bfa" opacity="0.25"/>
+  <rect x="96" y="352" width="120" height="10" rx="5" fill="#6b7a8c"/>
+  <rect x="316" y="352" width="120" height="10" rx="5" fill="#6b7a8c"/>
+  <rect x="536" y="352" width="120" height="10" rx="5" fill="#6b7a8c"/>
+  <text x="400" y="470" text-anchor="middle" fill="#6ee7b7" font-family="Segoe UI, sans-serif" font-size="22" font-weight="600">Devorux Health</text>
+</svg>

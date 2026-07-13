@@ -1,475 +1,817 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Rodrigo Aravena - FullStack Developer</title>
-    <meta name="description" content="FullStack Developer from Chile with 3 years of experience.">
+    <title>Rodrigo Aravena — Full Stack Developer</title>
+    <meta name="description" content="Desarrollador Full Stack de Chile con experiencia en Python, Node.js, Angular, React y GCP.">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Geist:wght@300;400;500&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
     <link rel="icon" type="image/x-icon" href="favicon.ico">
+    <meta property="og:image" content="img/avatar.png">
     <script src="script.js" defer></script>
 </head>
 <body>
-    <nav>
-        <button class="nav-dot active" data-section="intro" aria-label="Navigate to intro"></button>
-        <button class="nav-dot" data-section="work" aria-label="Navigate to work"></button>
-        <button class="nav-dot" data-section="thoughts" aria-label="Navigate to thoughts"></button>
-        <button class="nav-dot" data-section="connect" aria-label="Navigate to connect"></button>
-    </nav>
+
+    <div class="bg-glow" aria-hidden="true">
+        <div class="glow glow-1"></div>
+        <div class="glow glow-2"></div>
+        <div class="glow glow-3"></div>
+    </div>
+
+    <!-- Navbar -->
+    <header class="site-header" id="siteHeader">
+        <nav class="navbar" aria-label="Navegación principal">
+            <a href="#hero" class="nav-brand">Rodrigo Aravena</a>
+
+            <ul class="nav-links" id="navLinks">
+                <li><a href="#perfil">Perfil</a></li>
+                <li><a href="#experiencia">Experiencia</a></li>
+                <li><a href="#stack">Stack</a></li>
+                <li><a href="#proyectos">Proyectos</a></li>
+                <li><a href="#formacion">Formación</a></li>
+                <li><a href="#contacto">Contacto</a></li>
+            </ul>
+
+            <div class="nav-actions">
+                <a href="#contacto" class="nav-cta">Contactar</a>
+                <button id="themeToggle" class="icon-btn" aria-label="Cambiar tema">
+                    <svg id="sunIcon" width="18" height="18" fill="currentColor" viewBox="0 0 20 20">
+                        <path fill-rule="evenodd" d="M10 2a1 1 0 011 1v1a1 1 0 11-2 0V3a1 1 0 011-1zm4 8a4 4 0 11-8 0 4 4 0 018 0zm-.464 4.95l.707.707a1 1 0 001.414-1.414l-.707-.707a1 1 0 00-1.414 1.414zm2.12-10.607a1 1 0 010 1.414l-.706.707a1 1 0 11-1.414-1.414l.707-.707a1 1 0 011.414 0zM17 11a1 1 0 100-2h-1a1 1 0 100 2h1zm-7 4a1 1 0 011 1v1a1 1 0 11-2 0v-1a1 1 0 011-1zM5.05 6.464A1 1 0 106.465 5.05l-.708-.707a1 1 0 00-1.414 1.414l.707.707zm1.414 8.486l-.707.707a1 1 0 01-1.414-1.414l.707-.707a1 1 0 011.414 1.414zM4 11a1 1 0 100-2H3a1 1 0 000 2h1z" clip-rule="evenodd"/>
+                    </svg>
+                    <svg id="moonIcon" width="18" height="18" fill="currentColor" viewBox="0 0 20 20" style="display:none">
+                        <path d="M17.293 13.293A8 8 0 016.707 2.707a8.001 8.001 0 1010.586 10.586z"/>
+                    </svg>
+                </button>
+                <button class="menu-toggle" id="menuToggle" aria-label="Abrir menú" aria-expanded="false">
+                    <span></span><span></span><span></span>
+                </button>
+            </div>
+        </nav>
+    </header>
 
     <main>
-        <header id="intro">
-            <div class="header-grid">
-                <div>
-                    <div>
-                        <div class="portfolio-label">PORTFOLIO / 2025</div>
-                        <h1>
-                            Rodrigo<br>
-                            <span class="text-muted">Aravena</span>
-                        </h1>
+
+        <!-- Hero -->
+        <section id="hero" class="hero">
+            <div class="hero-grid container">
+                <div class="hero-content">
+                    <div class="badge">
+                        <span class="badge-dot"></span>
+                        Disponible para trabajar
                     </div>
 
-                    <div>
-                        <p class="intro-text">
-                            Soy un <span style="color: var(--foreground);">Desarrollador Full Stack</span> titulado en Duoc UC, con experiencia en <span style="color: var(--foreground);">Python</span>, <span style="color: var(--foreground);">Node.js</span>, <span style="color: var(--foreground);">Angular</span>, <span style="color: var(--foreground);">React</span> y <span style="color: var(--foreground);">GCP</span>. Me motiva la innovación y el trabajo en equipo para crear soluciones eficientes y escalables.
-                        </p>
+                    <h1 class="hero-title">
+                        Rodrigo<br>
+                        <span class="text-gradient">Aravena</span>
+                    </h1>
 
-
-                        <div class="status-container">
-                            <div class="flex items-center gap-2">
-                                <div class="status-dot"></div>
-                                Disponible para trabajar
-                            </div>
-                            <div>Chile</div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="currently-section">
-                    <div class="mb-6">
-                        <div class="section-label">ACTUALMENTE</div>
-                        <div style="margin-bottom: 0.5rem;">FullStack Developer</div>
-                        <div class="text-muted" style="margin-bottom: 0.5rem;">@ Reale Seguros</div>
-                        <div class="text-xs text-muted">2025 — Actualidad</div>
-                    </div>
-
-                    <div>
-                        <div class="section-label">Stack Principal</div>
-                        <div class="flex" style="flex-wrap: wrap; gap: 0.5rem;">
-                            <span class="skill-tag">Python</span>
-                            <span class="skill-tag">React</span>
-                            <span class="skill-tag">GCP</span>
-                            <span class="skill-tag">Angular</span>
-                            <span class="skill-tag">Node.js</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </header>
-
-<section id="work" class="work-section">
-  <div>
-    <div class="section-header">
-      <h2>Experiencia Laboral</h2>
-      <div class="text-sm text-muted" style="font-family: 'Courier New', monospace;">2020 — 2025</div>
-    </div>
-
-    <!-- Reale Seguros -->
-    <div class="work-item">
-      <!-- Fecha -->
-      <div class="work-period">
-        <div class="work-date">Junio 2025 -</div>
-        <div class="work-date">Actualidad</div>
-      </div>
-
-      <!-- Contenido -->
-      <div class="work-body">
-      <div class="role-line">
-        <img class="company-logo" src="img/reale.jpeg" alt="Reale Seguros">
-        <div class="role-meta">
-          <h3 class="role">Full Stack Developer</h3>
-          <div class="company text-muted" style="font-weight: 600;">Reale Seguros</div>
-        </div>
-      </div>
-        <p class="text-muted" style="line-height:1.75; max-width:32rem;">
-            Desarrollé un portal de gestión de solicitudes de teletrabajo, <strong>integrado</strong> con diversas plataformas para almacenar y sincronizar la información en la base de datos. La aplicación, construida con <strong>Node.js</strong> y <strong>Angular</strong>, cuenta con múltiples módulos y un apartado dedicado a la descarga de reportes.        </p>
-      </div>
-
-      <ul class="work-tech">
-        <li>Angular</li>
-        <li>Node.js</li>
-        <li>Docker</li>
-        <li>GitHub</li>
-        <li>Postman</li>
-      </ul>
-    </div>
-
-
-
-    <!-- Apiux -->
-    <div class="work-item">
-      <div class="work-period">
-        <div class="work-date">Enero 2024 -</div>
-        <div class="work-date">Marzo 2025</div>
-      </div>
-
-      <div class="work-body">
-      <div class="role-line">
-        <img class="company-logo" src="img/apx.jpeg" alt="Reale Seguros">
-        <div class="role-meta">
-          <h3 class="role">Full Stack Developer</h3>
-          <div class="company text-muted" style="font-weight: 600;">Apiux</div>
-        </div>
-      </div>
-     
-        <p class="text-muted" style="line-height:1.75; max-width:32rem;">
-          Participé en el desarrollo de un <strong>MVP de entrevistas con IA</strong>, integrando <strong>Spring Boot, Python y React</strong>, además de la conexión con TeamTailor (ATS) para automatizar el 
-          flujo de entrevistas mediante un <strong>avatar inteligente</strong>, mejorando la eficiencia y experiencia del reclutamiento. También contribuí al desarrollo de un portal de gestión de personas en 
-          <strong>Google Cloud Platform (GCP)</strong>, utilizando servicios como <strong>Cloud Functions</strong>, <strong>App Engine</strong>, <strong>Flask</strong>, <strong>MongoDB</strong>, <strong>Kafka</strong>, <strong>Cloud Run</strong> y <strong>Máquinas virtuales</strong>, garantizando escalabilidad y alto rendimiento.
-          Adicionalmente, diseñé asistentes virtuales con IA capaces de procesar datos empresariales estructurados y desarrollé un convertidor inteligente de CVs, que adapta documentos a formatos corporativos de manera automática, optimizando procesos internos y de selección.
-        </p>
-      </div>
-
-      <ul class="work-tech">
-        <li>Python</li>
-        <li>Spring Boot</li>
-        <li>Java</li>
-        <li>MongoDB</li>
-        <li>Kafka</li>
-        <li>React</li>
-        <li>GCP</li>
-        <li>PHP</li>
-        <li>AI</li>
-        <li>HTML</li>
-        <li>CSS</li>
-        <li>Redis</li>
-        <li>ElasticSearch</li>
-        <li>Docker</li>
-        <li>WordPress</li>
-        <li>MySQL</li>
-      </ul>
-    </div>
-    
-    <!-- Apiux -->
-    <div class="work-item">
-      <div class="work-period">
-        <div class="work-date">Octubre 2023 -</div>
-        <div class="work-date">Enero 2024</div>
-      </div>
-
-      <div class="work-body">
-      <div class="role-line">
-        <img class="company-logo" src="img/apx.jpeg" alt="Reale Seguros">
-        <div class="role-meta">
-          <h3 class="role">Software Development Practice</h3>
-          <div class="company text-muted" style="font-weight: 600;">Apiux</div>
-        </div>
-      </div>
-        <p class="text-muted" style="line-height:1.75; max-width:32rem;">
-          Diseñé e implementé una aplicación web para la automatización de reportes, capaz de consultar grandes volúmenes de datos en <strong>BigQuery</strong>
-           y generar informes de forma <strong>eficiente</strong> y <strong></strong>precisa</strong>. <strong>Integré</strong>
-            los resultados en plantillas personalizadas, <strong>optimizando</strong> el proceso de generación y entrega de reportes. Además, desarrollé y desplegué toda la infraestructura en <strong>Google Cloud Platform (GCP)</strong>, garantizando alto rendimiento, disponibilidad y escalabilidad del sistema.
-        </p>
-      </div>
-
-      <!-- Skills -->
-      <ul class="work-tech">
-        <li>Python</li>
-        <li>GCP</li>
-        <li>HTML</li>
-        <li>CSS</li>
-        <li>BigQuery</li>
-        <li>MongoDB</li>
-      </ul>
-    </div>
-    
-    
-    <!-- Transportes CG -->
-    <div class="work-item">
-      <!-- Fecha -->
-      <div class="work-period">
-        <div class="work-date">Mayo 2023 -</div>
-        <div class="work-date">Octubre 2024</div>
-      </div>
-
-      <!-- Contenido -->
-      <div class="work-body">
-      <div class="role-line">
-        <img class="company-logo" src="img/cgtr.jpeg" alt="Transportes CG">
-        <div class="role-meta">
-          <h3 class="role">Software Development Practice</h3>
-          <div class="company text-muted" style="font-weight: 600;">Transportes CG</div>
-        </div>
-      </div>
-
-        <p class="text-muted" style="line-height:1.75; max-width:32rem;">
-          Desarrollé y modernicé plataformas web con <strong>PHP</strong> y <strong>WordPress</strong>, implementando interfaces optimizadas y múltiples CRUD para mejorar la usabilidad. <strong>Diseñé un nuevo portal</strong> integrado para administradores y clientes, fortaleciendo la conexión con los sistemas internos de la empresa. <strong>Brindé soporte continuo y mantenimiento</strong>, asegurando el correcto funcionamiento y la evolución constante de las aplicaciones.
-      </div>
-
-      <!-- Skills -->
-      <ul class="work-tech">
-        <li>PHP</li>
-        <li>WordPress</li>
-        <li>MySQL</li>
-        <li>HTML</li>
-        <li>CSS</li>
-      </ul>
-    </div>
-
-    <!-- Comercial Burton -->
-    <div class="work-item">
-      <!-- Fecha -->
-      <div class="work-period">
-        <div class="work-date">Diciembre 2020 -</div>
-        <div class="work-date">Octubre 2021</div>
-      </div>
-
-      <!-- Contenido -->
-      <div class="work-body">
-
-      <div class="role-line">
-        <img class="company-logo" src="img/comercialburton.png" alt="Comercial Burton">
-        <div class="role-meta">
-          <h3 class="role">Desarrollador Web y Mantenedor de Sitio</h3>
-          <div class="company text-muted;" style="font-weight: 600;">Comercial Burton</div>
-        </div>
-      </div>
-
-        <p class="text-muted" style="line-height:1.75; max-width:32rem;">
-          Desarrollo y mantenimiento con <strong>Joomla</strong> y <strong>PHP</strong>, integración de <strong>VirtueMart</strong> para e-commerce y optimización del catálogo con mejor presentación de productos.
-        </p>
-      </div>
-
-      <!-- Skills -->
-      <ul class="work-tech">
-        <li>Joomla</li>
-        <li>VirtueMart</li>
-        <li>PHP</li>
-        <li>HTML</li>
-        <li>CSS</li>
-      </ul>
-    </div>
-  </div>
-</section>
-
-
-
-        <section id="thoughts" class="thoughts-section">
-            <div>
-                <h2 style="margin-bottom: 3rem;">Proyectos Recientes</h2>
-
-                <div class="thoughts-grid">
-                  <article class="thought-card"
-                    data-title="WealthWise"
-                    data-desc="Aplicación web para gestión inteligente de finanzas personales. Controla gastos, administra deudas y optimiza tu presupuesto."
-                    data-url="https://rodrigoaravena.vexy.host/WealthWise"
-                    data-images='["img/wealthwise/app1.png","img/wealthwise/app2.png","img/wealthwise/app3.png","img/wealthwise/app4.png","img/wealthwise/home.png","img/wealthwise/home2.png","img/wealthwise/home3.png"]'>
-                    <h3>WealthWise</h3>
-                    <p>Aplicación web para gestión inteligente de finanzas personales. Controla gastos, administra deudas y optimiza tu presupuesto de forma sencilla.</p>
-                    <div class="read-more">
-                      <span> <strong>Ver Mas</strong></span>
-                      <svg class="arrow-icon" width="16" height="16" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/>
-                      </svg>
-                    </div>
-                  </article>
-                  <article class="thought-card"
-                    data-title="Terminal Mac"
-                    data-desc="Simulador interactivo de consola macOS/Linux hecho con HTML, CSS y JavaScript. Permite escribir comandos como ls, pwd, uname o date, mostrando respuestas aleatorias en una interfaz realista con diseño estilo macOS y cursor parpadeante."                    
-                    data-url="https://rodrigoaravena.vexy.host/Terminal/home.html"
-                    data-images='["img/Terminal/Terminal.png"]'>
-                    <h3>Terminal Mac</h3>
-                    <p>Aplicación web para gestión inteligente de finanzas personales. Controla gastos, administra deudas y optimiza tu presupuesto de forma sencilla.</p>
-                    <div class="read-more">
-                      <span> <strong>Ver Mas</strong></span>
-                      <svg class="arrow-icon" width="16" height="16" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/>
-                      </svg>
-                    </div>
-                  </article>
-
-                  <article class="thought-card"
-                    data-title="Animacion Planeta"
-                    data-desc="Animación del planeta Tierra en HTML5 Canvas y JavaScript. Genera partículas luminosas que orbitan creando un efecto de rotación fluido y dinámico, ajustado para desktop y móvil sin usar librerías externas."                    
-                    data-url="https://rodrigoaravena.vexy.host/Planeta/home.html"
-                    data-images='["img/Planeta/planeta.gif"]'>
-                    <h3>Animacion Planeta</h3>
-                    <p>Aplicación web para gestión inteligente de finanzas personales. Controla gastos, administra deudas y optimiza tu presupuesto de forma sencilla.</p>
-                    <div class="read-more">
-                      <span> <strong>Ver Mas</strong></span>
-                      <svg class="arrow-icon" width="16" height="16" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/>
-                      </svg>
-                    </div>
-                  </article>
-
-
-                  <article class="thought-card"
-                    data-title="PowerShell Tools"
-                    data-desc="Script en Python con menú interactivo para Windows. Permite instalar programas, descargar repositorios y ejecutar herramientas como obtener la contraseña Wi-Fi u optimizar servicios del sistema. Usa subprocess, os, time y colorama con interfaz animada en consola."                    
-                    data-url="https://rodrigoaravena.vexy.host/PowerShellTools/Gridor-Tools.exe"
-                    data-images='["img/PowerShellTools/Powershell.png"]'>
-                    <h3>PowerShell Tools</h3>
-                    <p>Script en Python para automatizar tareas en Windows: instalar programas, descargar repositorios, ver contraseña Wi-Fi y optimizar servicios, con interfaz animada en consola.</p>
-                    <div class="read-more">
-                      <span> <strong>Ver Mas</strong></span>
-                      <svg class="arrow-icon" width="16" height="16" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/>
-                      </svg>
-                    </div>
-                  </article>
-
-
-                  <article class="thought-card"
-                    data-title="Fitness Track"
-                    data-desc="Script en Python con menú interactivo para Windows. Permite instalar programas, descargar repositorios y ejecutar herramientas como obtener la contraseña Wi-Fi u optimizar servicios del sistema. Usa subprocess, os, time y colorama con interfaz animada en consola."                    
-                    data-url="https://rodrigoaravena.vexy.host/FitnessTrack/home.html"
-                    data-images='["img/FitnessTrack/app1.png","img/FitnessTrack/app2.png"]'>
-                    <h3>Fitness Track</h3>
-                    <p>App web de entrenamiento con calendario: registra ejercicios diarios y peso mensual, hace auto-guardado en GitHub (token), permite backup/recarga y ofrece UI responsive con modales.</p>
-                    <div class="read-more">
-                      <span> <strong>Ver Mas</strong></span>
-                      <svg class="arrow-icon" width="16" height="16" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/>
-                      </svg>
-                    </div>
-                  </article>
-
-
-
-                  <article class="thought-card"
-                    data-title="Fitness Track"
-                    data-desc="Script en Python con menú interactivo para Windows. Permite instalar programas, descargar repositorios y ejecutar herramientas como obtener la contraseña Wi-Fi u optimizar servicios del sistema. Usa subprocess, os, time y colorama con interfaz animada en consola."                    
-                    data-url="https://rodrigoaravena.vexy.host/FitnessTrack/home.html"
-                    data-images='["img/FitnessTrack/app1.png","img/FitnessTrack/app2.png"]'>
-                    <h3>Fitness Track</h3>
-                    <p>App web de entrenamiento con calendario: registra ejercicios diarios y peso mensual, hace auto-guardado en GitHub (token), permite backup/recarga y ofrece UI responsive con modales.</p>
-                    <div class="read-more">
-                      <span> <strong>Ver Mas</strong></span>
-                      <svg class="arrow-icon" width="16" height="16" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/>
-                      </svg>
-                    </div>
-                  </article>
-                </div>
-            </div>
-        </section>
-
-        <section id="connect" class="connect-section">
-            <div class="connect-grid">
-            <div>
-                <h2 style="margin-bottom: 1.5rem;">Conectemos</h2>
-
-                <div>
-                    <p class="intro-text" style="margin-bottom: 1.5rem;">
-                        Siempre abierto a nuevas oportunidades, colaboraciones sobre tecnología y diseño.
+                    <p class="hero-desc">
+                        Soy un <strong>Desarrollador Full Stack / Backend</strong> e <strong>Ingeniero en Informática</strong>
+                        titulado en <strong>Duoc UC</strong>, con experiencia en <strong>Python</strong>, <strong>Node.js</strong>,
+                        <strong>Angular</strong>, <strong>React</strong>, <strong>Nuxt</strong> y <strong>GCP</strong>.
+                        Actualmente en <strong>Renta Nacional</strong> desarrollando el cotizador de seguros con IA.
+                        Me motiva crear soluciones eficientes, escalables y listas para producción.
                     </p>
 
-                    <a href="mailto:test@example.com" class="email-link">
-                        <span>Ro.aravenac@gmail.com</span>
-                        <svg class="arrow-icon" width="20" height="20" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/>
-                        </svg>
-                    </a>
+                    <div class="hero-cta">
+                        <a href="#proyectos" class="btn btn-primary">
+                            Ver proyectos
+                            <svg width="16" height="16" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 14l-7 7m0 0l-7-7m7 7V3"/></svg>
+                        </a>
+                        <a href="cv/Rodrigo_Aravena_Cornejo.pdf" download class="btn btn-outline">
+                            <svg width="16" height="16" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"/></svg>
+                            Descargar CV
+                        </a>
+                        <a href="mailto:ro.aravenac@gmail.com" class="btn btn-outline">Hablemos</a>
+                    </div>
+
+                    <div class="hero-tags">
+                        <span class="tag">Chile</span>
+                        <span class="tag">Duoc UC</span>
+                        <span class="tag">Full Stack</span>
+                    </div>
                 </div>
-            </div>
 
+                <div class="hero-aside">
+                    <div class="profile-showcase">
+                        <div class="profile-avatar-frame">
+                            <img src="img/avatar.png" alt="Rodrigo Aravena" class="profile-avatar" loading="eager">
+                        </div>
 
-                <div>
-                    <div class="section-label">También en</div>
+                        <div class="profile-meta">
+                            <p class="profile-label">Front · Back · Cloud · IA</p>
+                        </div>
 
-                    <div class="social-grid">
-                        <a href="https://github.com/rodrigog898" class="social-card">
-                            <div class="social-name">GitHub</div>
-                            <div class="social-handle">@Rodrigog898</div>
-                        </a>
-                        <a href="https://www.linkedin.com/in/rodrigo-alonso-aravena-cornejo-7b1219249/" class="social-card">
-                            <div class="social-name">LinkedIn</div>
-                            <div class="social-handle">Rodrigo Aravena</div>
-                        </a>
-                        <a href="#" class="social-card">
-                          <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
-                              stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                            <rect x="3" y="4" width="18" height="12" rx="2" ry="2"></rect>
-                            <line x1="2" y1="20" x2="22" y2="20"></line>
-                          </svg>
-                          <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
-                              stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                            <path d="M10 13a5 5 0 0 1 7 7l-1 1a5 5 0 0 1-7-7"></path>
-                            <path d="M14 11a5 5 0 0 1-7-7l1-1a5 5 0 0 1 7 7"></path>
-                          </svg>
-                        </a>
-                        <a href="#" class="social-card">
-                            <div class="social-name">Discord</div>
-                            <div class="social-handle">@.rodrigog</div>
-                        </a>
+                        <div class="profile-stack">
+                            <span>React</span>
+                            <span>Python</span>
+                            <span>Angular</span>
+                            <span>Node.js</span>
+                            <span>GCP</span>
+                            <span>Docker</span>
+                        </div>
 
+                        <div class="profile-social">
+                            <a href="https://github.com/rodrigog898" target="_blank" rel="noopener" class="social-icon" aria-label="GitHub">
+                                <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg>
+                            </a>
+                            <a href="https://www.linkedin.com/in/rodrigo-alonso-aravena-cornejo-7b1219249/" target="_blank" rel="noopener" class="social-icon" aria-label="LinkedIn">
+                                <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 114.127 0 2.062 2.062 0 01-2.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+                            </a>
+                            <a href="mailto:ro.aravenac@gmail.com" class="social-icon" aria-label="Email">
+                                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="M22 7l-10 7L2 7"/></svg>
+                            </a>
+                            <button type="button" class="social-icon" data-copy-discord aria-label="Copiar usuario de Discord">
+                                <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M20.317 4.37a19.791 19.791 0 00-4.885-1.515.074.074 0 00-.079.037c-.21.375-.444.864-.608 1.25a18.27 18.27 0 00-5.487 0 12.64 12.64 0 00-.617-1.25.077.077 0 00-.079-.037A19.736 19.736 0 003.677 4.37a.07.07 0 00-.032.027C.533 9.046-.32 13.58.099 18.057a.082.082 0 00.031.057 19.9 19.9 0 005.993 3.03.078.078 0 00.084-.028 14.09 14.09 0 001.226-1.994.076.076 0 00-.041-.106 13.107 13.107 0 01-1.872-.892.077.077 0 01-.008-.128 10.2 10.2 0 00.372-.292.074.074 0 01.077-.01c3.928 1.793 8.18 1.793 12.062 0a.074.074 0 01.078.01c.12.098.246.198.373.292a.077.077 0 01-.006.127 12.299 12.299 0 01-1.873.892.077.077 0 00-.041.107c.36.698.772 1.362 1.225 1.993a.076.076 0 00.084.028 19.839 19.839 0 006.002-3.03.077.077 0 00.032-.054c.5-5.177-.838-9.674-3.549-13.66a.061.061 0 00-.031-.03zM8.02 15.33c-1.183 0-2.157-1.085-2.157-2.419 0-1.333.956-2.419 2.157-2.419 1.21 0 2.176 1.096 2.157 2.42 0 1.333-.956 2.418-2.157 2.418zm7.975 0c-1.183 0-2.157-1.085-2.157-2.419 0-1.333.955-2.419 2.157-2.419 1.21 0 2.176 1.096 2.157 2.42 0 1.333-.946 2.418-2.157 2.418z"/></svg>
+                            </button>
+                            <a href="cv/Rodrigo_Aravena_Cornejo.pdf" download class="social-icon" aria-label="Descargar CV">
+                                <svg width="18" height="18" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"/></svg>
+                            </a>
+                        </div>
                     </div>
                 </div>
             </div>
         </section>
 
-        <footer>
-            <div class="footer-content">
-                <div>
-                    <div class="text-sm text-muted mb-2">© 2025 Rodrigo Aravena ❤️.</div>
-                </div>
+        <!-- Perfil -->
+        <section id="perfil" class="section">
+            <div class="section-inner">
+                <span class="section-label">Perfil</span>
+                <h2 class="section-title">Más allá del código.</h2>
 
-                <div class="footer-buttons">
-                    <button id="themeToggle" class="icon-button" aria-label="Toggle theme">
-                        <svg id="sunIcon" width="16" height="16" fill="currentColor" viewBox="0 0 20 20" style="display: none;">
-                            <path fill-rule="evenodd" d="M10 2a1 1 0 011 1v1a1 1 0 11-2 0V3a1 1 0 011-1zm4 8a4 4 0 11-8 0 4 4 0 018 0zm-.464 4.95l.707.707a1 1 0 001.414-1.414l-.707-.707a1 1 0 00-1.414 1.414zm2.12-10.607a1 1 0 010 1.414l-.706.707a1 1 0 11-1.414-1.414l.707-.707a1 1 0 011.414 0zM17 11a1 1 0 100-2h-1a1 1 0 100 2h1zm-7 4a1 1 0 011 1v1a1 1 0 11-2 0v-1a1 1 0 011-1zM5.05 6.464A1 1 0 106.465 5.05l-.708-.707a1 1 0 00-1.414 1.414l.707.707zm1.414 8.486l-.707.707a1 1 0 01-1.414-1.414l.707-.707a1 1 0 011.414 1.414zM4 11a1 1 0 100-2H3a1 1 0 000 2h1z" clip-rule="evenodd"/>
-                        </svg>
-                        <svg id="moonIcon" width="16" height="16" fill="currentColor" viewBox="0 0 20 20">
-                            <path d="M17.293 13.293A8 8 0 016.707 2.707a8.001 8.001 0 1010.586 10.586z"/>
-                        </svg>
-                    </button>
+                <div class="perfil-grid">
+                    <div class="perfil-text">
+                        <p>
+                            Desarrollador Full Stack / Backend e <strong>Ingeniero en Informática</strong> titulado en
+                            <strong>Duoc UC</strong>, con más de 3 años de experiencia construyendo software completo —
+                            desde la interfaz hasta la base de datos — en entornos empresariales y de producción.
+                        </p>
+                        <p>
+                            He trabajado con <strong>Python, Node.js, Angular, React, Nuxt y GCP</strong> en proyectos
+                            reales de seguros, reclutamiento con IA, portales de datos y automatización de reportes.
+                            Me interesa el desarrollo orientado a producción: código que se puede mantener, desplegar y escalar.
+                        </p>
+                        <p>
+                            Actualmente en <strong>Renta Nacional</strong> desarrollando el cotizador de seguros
+                            automotrices con IA, con experiencia previa en <strong>Reale Seguros</strong> y
+                            <strong>Apiux Tech</strong>. Combino lo técnico con visión de negocio para entregar
+                            soluciones que funcionan en el mundo real.
+                        </p>
+                    </div>
 
-                    <button class="icon-button">
-                        <svg width="16" height="16" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z"/>
-                        </svg>
-                    </button>
+                    <div class="feature-cards">
+                        <article class="feature-card">
+                            <div class="feature-icon" aria-hidden="true">⚡</div>
+                            <h4>Desarrollo Full Stack</h4>
+                            <p>Portales web con Angular y React conectados a APIs en Node.js, Spring Boot y Python, con bases de datos relacionales y NoSQL.</p>
+                        </article>
+                        <article class="feature-card">
+                            <div class="feature-icon" aria-hidden="true">🤖</div>
+                            <h4>Inteligencia Artificial</h4>
+                            <p>MVP de entrevistas con IA, asistentes virtuales empresariales y convertidor inteligente de CVs para optimizar procesos de selección.</p>
+                        </article>
+                        <article class="feature-card">
+                            <div class="feature-icon" aria-hidden="true">☁️</div>
+                            <h4>Cloud & DevOps</h4>
+                            <p>Despliegue en GCP con Cloud Functions, App Engine, Cloud Run, Kafka y Docker. Automatización de reportes con BigQuery.</p>
+                        </article>
+                        <article class="feature-card">
+                            <div class="feature-icon" aria-hidden="true">🚀</div>
+                            <h4>Proyectos reales</h4>
+                            <p>Experiencia en productos usados en producción — portales de gestión, dashboards de datos y aplicaciones web escalables.</p>
+                        </article>
+                    </div>
                 </div>
             </div>
-        </footer>
+        </section>
+
+        <!-- Experiencia -->
+        <section id="experiencia" class="section section-alt">
+            <div class="section-inner">
+                <div class="section-header-row">
+                    <div>
+                        <span class="section-label">Experiencia</span>
+                        <h2 class="section-title">Donde he trabajado.</h2>
+                    </div>
+                    <span class="section-meta">2020 — Actualidad</span>
+                </div>
+
+                <div class="experience-list timeline">
+
+                    <article class="exp-card">
+                        <div class="exp-header">
+                            <img class="exp-logo" src="img/rentanacional.png" alt="Renta Nacional">
+                            <div class="exp-meta">
+                                <h3>Full Stack Developer</h3>
+                                <span class="exp-company">Renta Nacional</span>
+                            </div>
+                            <time class="exp-date">Dic 2025 — Actualidad</time>
+                        </div>
+                        <p>Desarrollo y planificación del <strong>cotizador de seguros automotrices</strong> integrado con <strong>inteligencia artificial</strong>, aplicando distintas casuísticas de negocio. Trabajo con arquitectura basada en <strong>Nuxt</strong>, <strong>Node.js</strong>, <strong>Prisma</strong>, <strong>MongoDB</strong> y <strong>RabbitMQ</strong>, entre otras tecnologías del stack.</p>
+                        <ul class="tech-tags">
+                            <li>Nuxt</li><li>Node.js</li><li>Prisma</li><li>MongoDB</li><li>RabbitMQ</li><li>IA</li>
+                        </ul>
+                    </article>
+
+                    <article class="exp-card">
+                        <div class="exp-header">
+                            <img class="exp-logo" src="img/reale.jpeg" alt="Reale Seguros">
+                            <div class="exp-meta">
+                                <h3>Full Stack Developer</h3>
+                                <span class="exp-company">Reale Seguros</span>
+                            </div>
+                            <time class="exp-date">Jun 2025 — Dic 2025</time>
+                        </div>
+                        <p>Desarrollé un portal de gestión de solicitudes de teletrabajo, <strong>integrado</strong> con diversas plataformas para almacenar y sincronizar la información en la base de datos. La aplicación, construida con <strong>Node.js</strong> y <strong>Angular</strong>, cuenta con múltiples módulos y un apartado dedicado a la descarga de reportes.</p>
+                        <ul class="tech-tags">
+                            <li>Angular</li><li>Node.js</li><li>Docker</li><li>GitHub</li><li>Postman</li>
+                        </ul>
+                    </article>
+
+                    <article class="exp-card">
+                        <div class="exp-header">
+                            <img class="exp-logo" src="img/apx.jpeg" alt="Apiux">
+                            <div class="exp-meta">
+                                <h3>Full Stack Developer</h3>
+                                <span class="exp-company">Apiux</span>
+                            </div>
+                            <time class="exp-date">Ene 2024 — Mar 2025</time>
+                        </div>
+                        <p>Participé en el desarrollo de un <strong>MVP de entrevistas con IA</strong>, integrando <strong>Spring Boot, Python y React</strong>, además de la conexión con TeamTailor (ATS) para automatizar el flujo de entrevistas mediante un <strong>avatar inteligente</strong>. También contribuí al desarrollo de un portal de gestión de personas en <strong>GCP</strong>, utilizando Cloud Functions, App Engine, Flask, MongoDB, Kafka y Cloud Run. Adicionalmente, diseñé asistentes virtuales con IA y un convertidor inteligente de CVs.</p>
+                        <ul class="tech-tags">
+                            <li>Python</li><li>Spring Boot</li><li>Java</li><li>MongoDB</li><li>Kafka</li>
+                            <li>React</li><li>GCP</li><li>PHP</li><li>AI</li><li>Redis</li><li>ElasticSearch</li><li>Docker</li>
+                        </ul>
+                    </article>
+
+                    <article class="exp-card">
+                        <div class="exp-header">
+                            <img class="exp-logo" src="img/apx.jpeg" alt="Apiux">
+                            <div class="exp-meta">
+                                <h3>Software Development Practice</h3>
+                                <span class="exp-company">Apiux</span>
+                            </div>
+                            <time class="exp-date">Oct 2023 — Ene 2024</time>
+                        </div>
+                        <p>Diseñé e implementé una aplicación web para la automatización de reportes, capaz de consultar grandes volúmenes de datos en <strong>BigQuery</strong> y generar informes de forma <strong>eficiente</strong> y <strong>precisa</strong>. Desarrollé y desplegué toda la infraestructura en <strong>GCP</strong>, garantizando alto rendimiento, disponibilidad y escalabilidad.</p>
+                        <ul class="tech-tags">
+                            <li>Python</li><li>GCP</li><li>BigQuery</li><li>MongoDB</li><li>HTML</li><li>CSS</li>
+                        </ul>
+                    </article>
+
+                    <article class="exp-card">
+                        <div class="exp-header">
+                            <img class="exp-logo" src="img/cgtr.jpeg" alt="Transportes CG">
+                            <div class="exp-meta">
+                                <h3>Software Development Practice</h3>
+                                <span class="exp-company">Transportes CG</span>
+                            </div>
+                            <time class="exp-date">May 2023 — Oct 2024</time>
+                        </div>
+                        <p>Desarrollé y modernicé plataformas web con <strong>PHP</strong> y <strong>WordPress</strong>, implementando interfaces optimizadas y múltiples CRUD. <strong>Diseñé un nuevo portal</strong> integrado para administradores y clientes, fortaleciendo la conexión con los sistemas internos de la empresa.</p>
+                        <ul class="tech-tags">
+                            <li>PHP</li><li>WordPress</li><li>MySQL</li><li>HTML</li><li>CSS</li>
+                        </ul>
+                    </article>
+
+                    <article class="exp-card">
+                        <div class="exp-header">
+                            <img class="exp-logo" src="img/comercialburton.png" alt="Comercial Burton">
+                            <div class="exp-meta">
+                                <h3>Desarrollador Web y Mantenedor de Sitio</h3>
+                                <span class="exp-company">Comercial Burton</span>
+                            </div>
+                            <time class="exp-date">Dic 2020 — Oct 2021</time>
+                        </div>
+                        <p>Desarrollo y mantenimiento con <strong>Joomla</strong> y <strong>PHP</strong>, integración de <strong>VirtueMart</strong> para e-commerce y optimización del catálogo con mejor presentación de productos.</p>
+                        <ul class="tech-tags">
+                            <li>Joomla</li><li>VirtueMart</li><li>PHP</li><li>HTML</li><li>CSS</li>
+                        </ul>
+                    </article>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- Stack -->
+        <section id="stack" class="section">
+            <div class="section-inner">
+                <span class="section-label">Tecnologías</span>
+                <h2 class="section-title">Con qué trabajo.</h2>
+                <p class="section-subtitle">Tecnologías que he aplicado en apps y proyectos reales, y otras que he estudiado para seguir ampliando mi stack.</p>
+
+                <div class="stack-grid">
+                    <div class="stack-group">
+                        <h3 class="stack-category">Frontend</h3>
+                        <div class="stack-tags">
+                            <span>React</span><span>Angular</span><span>Nuxt</span><span>JavaScript</span><span>TypeScript</span><span>HTML5 & CSS3</span><span>Vite</span>
+                        </div>
+                    </div>
+                    <div class="stack-group">
+                        <h3 class="stack-category">Backend & Bases de datos</h3>
+                        <div class="stack-tags">
+                            <span>Node.js</span><span>Express.js</span><span>Python</span><span>Spring Boot</span><span>Java</span><span>PHP</span><span>Flask</span><span>Prisma</span><span>REST APIs</span><span>Integración con Stripe</span><span>PostgreSQL</span><span>MongoDB</span><span>MySQL</span><span>Redis</span><span>ElasticSearch</span>
+                        </div>
+                    </div>
+                    <div class="stack-group">
+                        <h3 class="stack-category">Cloud & DevOps</h3>
+                        <div class="stack-tags">
+                            <span>GCP</span><span>Cloud Functions</span><span>App Engine</span><span>Cloud Run</span><span>BigQuery</span><span>Kafka</span><span>RabbitMQ</span><span>Docker</span><span>Git & GitHub</span>
+                        </div>
+                    </div>
+                    <div class="stack-group">
+                        <h3 class="stack-category">IA & Otros</h3>
+                        <div class="stack-tags">
+                            <span>Inteligencia Artificial</span><span>WordPress</span><span>Joomla</span><span>Postman</span><span>Apidog</span><span>Scraping</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Proyectos -->
+        <section id="proyectos" class="section section-alt">
+            <div class="section-inner">
+                <span class="section-label">Proyectos</span>
+                <h2 class="section-title">Lo que he construido.</h2>
+                <p class="section-subtitle">Proyectos personales y aplicaciones web desplegadas.</p>
+
+                <div class="projects-grid">
+
+                    <article class="project-card">
+                        <div class="project-preview">
+                            <img src="img/devorux-health/preview.png" alt="Captura de Devorux Health" loading="lazy">
+                        </div>
+                        <div class="project-body">
+                            <div class="project-tags">
+                                <span>Salud</span><span>Nutrición</span><span>Stripe</span><span>Web App</span>
+                            </div>
+                            <h3>Devorux Health</h3>
+                            <p>Plataforma de salud y nutrición inteligente. Centraliza nutrición, progreso físico e hidratación con paneles claros, asistente Olivia y planes de suscripción vía Stripe.</p>
+                            <div class="project-actions">
+                                <a href="https://health.devorux.com/health" target="_blank" rel="noopener" class="project-btn project-btn--live">Live</a>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="project-card">
+                        <div class="project-preview">
+                            <img src="img/wealthwise/home.png" alt="Captura de WealthWise" loading="lazy">
+                        </div>
+                        <div class="project-body">
+                            <div class="project-tags">
+                                <span>React</span><span>Finanzas</span><span>Web App</span>
+                            </div>
+                            <h3>WealthWise</h3>
+                            <p>Aplicación web para gestión inteligente de finanzas personales. Controla gastos, administra deudas y optimiza tu presupuesto de forma sencilla.</p>
+                            <div class="project-actions">
+                                <a href="https://rodrigoaravena.vexy.host/WealthWise" target="_blank" rel="noopener" class="project-btn project-btn--live">Live</a>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="project-card">
+                        <div class="project-preview">
+                            <img src="img/Terminal/Terminal.png" alt="Captura de Terminal Mac" loading="lazy">
+                        </div>
+                        <div class="project-body">
+                            <div class="project-tags">
+                                <span>HTML5</span><span>CSS3</span><span>JavaScript</span>
+                            </div>
+                            <h3>Terminal Mac</h3>
+                            <p>Simulador interactivo de consola macOS/Linux con comandos reales, interfaz estilo macOS y cursor parpadeante.</p>
+                            <div class="project-actions">
+                                <a href="https://github.com/rodrigog898/recursos-html/tree/main/Terminal%20Mac" target="_blank" rel="noopener" class="project-btn project-btn--code">
+                                    <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0 0 24 12c0-6.63-5.37-12-12-12z"/></svg>
+                                    GitHub
+                                </a>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="project-card">
+                        <div class="project-preview">
+                            <img src="img/Planeta/planeta.gif" alt="Animación del planeta Tierra" loading="lazy">
+                        </div>
+                        <div class="project-body">
+                            <div class="project-tags">
+                                <span>Canvas</span><span>JavaScript</span><span>Animación</span>
+                            </div>
+                            <h3>Animación Planeta</h3>
+                            <p>Animación del planeta Tierra con partículas luminosas orbitando, efecto de rotación fluido sin librerías externas.</p>
+                            <div class="project-actions">
+                                <a href="https://github.com/rodrigog898/recursos-html/tree/main/Planeta%20Animacion" target="_blank" rel="noopener" class="project-btn project-btn--code">
+                                    <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0 0 24 12c0-6.63-5.37-12-12-12z"/></svg>
+                                    GitHub
+                                </a>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="project-card">
+                        <div class="project-preview">
+                            <img src="img/PowerShellTools/Powershell.png" alt="Captura de PowerShell Tools" loading="lazy">
+                        </div>
+                        <div class="project-body">
+                            <div class="project-tags">
+                                <span>Python</span><span>Automatización</span><span>Windows</span>
+                            </div>
+                            <h3>PowerShell Tools</h3>
+                            <p>Script en Python para automatizar tareas en Windows: instalar programas, descargar repositorios y optimizar servicios.</p>
+                            <div class="project-actions">
+                                <a href="https://github.com/rodrigog898/Gridor-Tools" target="_blank" rel="noopener" class="project-btn project-btn--code">
+                                    <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0 0 24 12c0-6.63-5.37-12-12-12z"/></svg>
+                                    GitHub
+                                </a>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="project-card">
+                        <div class="project-preview">
+                            <img src="img/FitnessTrack/app1.png" alt="Captura de Fitness Track" loading="lazy">
+                        </div>
+                        <div class="project-body">
+                            <div class="project-tags">
+                                <span>JavaScript</span><span>GitHub API</span><span>Responsive</span>
+                            </div>
+                            <h3>Fitness Track</h3>
+                            <p>App web de entrenamiento con calendario, auto-guardado en GitHub, backup/recarga y UI responsive con modales.</p>
+                            <div class="project-actions">
+                                <a href="https://github.com/rodrigog898/fitness-track" target="_blank" rel="noopener" class="project-btn project-btn--code">
+                                    <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0 0 24 12c0-6.63-5.37-12-12-12z"/></svg>
+                                    GitHub
+                                </a>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="project-card project-card--summary">
+                        <div class="project-preview project-preview--summary">
+                            <span class="summary-number">10+</span>
+                            <span class="summary-label">proyectos desarrollados</span>
+                        </div>
+                        <div class="project-body">
+                            <div class="project-tags">
+                                <span>Experiencia real</span><span>Empresas</span><span>Freelance</span>
+                            </div>
+                            <h3>Más desarrollo en producción</h3>
+                            <p>Además de estos proyectos públicos, he desarrollado más de 10 soluciones web y herramientas internas en las empresas donde he trabajado.</p>
+                        </div>
+                    </article>
+
+                    <article class="project-card project-card--soon">
+                        <div class="project-preview project-preview--code" aria-hidden="true">
+                            <div class="code-terminal">
+                                <div class="code-terminal-header">
+                                    <span></span><span></span><span></span>
+                                    <span class="code-terminal-title">nuevo-proyecto.tsx</span>
+                                </div>
+                                <pre class="code-snippet"><code>
+<span class="code-line" style="--i:0"><span class="code-kw">const</span> nextProject = {</span>
+<span class="code-line" style="--i:1">  status: <span class="code-str">'building'</span>,</span>
+<span class="code-line" style="--i:2">  deploy: <span class="code-fn">await</span> <span class="code-fn">build</span>(),</span>
+<span class="code-line" style="--i:3">};</span>
+<span class="code-line code-line--typing" style="--i:4"><span class="code-comment">// próximamente</span><span class="code-cursor"></span></span>
+                                </code></pre>
+                            </div>
+                            <span class="soon-badge">Próximamente</span>
+                        </div>
+                        <div class="project-body">
+                            <div class="project-tags">
+                                <span>Próximamente</span>
+                            </div>
+                            <h3>Más proyectos en camino</h3>
+                            <p>Trabajando en nuevos proyectos para agregar al portafolio. Visita mi GitHub para ver el trabajo en curso.</p>
+                            <div class="project-actions">
+                                <a href="https://github.com/rodrigog898" target="_blank" rel="noopener" class="project-btn project-btn--code">
+                                    <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0 0 24 12c0-6.63-5.37-12-12-12z"/></svg>
+                                    Código
+                                </a>
+                            </div>
+                        </div>
+                    </article>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- Formación -->
+        <section id="formacion" class="section">
+            <div class="section-inner">
+                <span class="section-label">Formación</span>
+                <h2 class="section-title">Cursos y certificaciones.</h2>
+                <p class="section-subtitle">Formación complementaria para validar y profundizar conocimientos en tecnologías clave del desarrollo, datos e inteligencia artificial.</p>
+
+                <div class="certs-block">
+                    <h3 class="certs-block-title">Certificaciones</h3>
+                    <div class="certs-grid">
+                        <article class="cert-card">
+                            <img class="cert-logo" src="img/certs/google.png" alt="Google">
+                            <div class="cert-body">
+                                <h3>MTA: Introduction to Programming Using HTML and CSS</h3>
+                                <p class="cert-issuer">Google · Feb 2023</p>
+                            </div>
+                        </article>
+
+                        <article class="cert-card">
+                            <img class="cert-logo" src="img/certs/google.png" alt="Google Digital Academy">
+                            <div class="cert-body">
+                                <h3>Certificación en Aplicaciones de Google Ads</h3>
+                                <p class="cert-issuer">Google Digital Academy · Nov 2023</p>
+                            </div>
+                            <a class="cert-link" href="https://skillshop.credential.net/90246119-62b6-4a23-bc69-abcacd8d5a0c" target="_blank" rel="noopener">Ver certificado</a>
+                        </article>
+                    </div>
+                </div>
+
+                <div class="certs-block">
+                    <h3 class="certs-block-title">Cursos</h3>
+                    <div class="certs-grid" id="cursos-grid">
+                        <article class="cert-card">
+                            <img class="cert-logo" src="img/certs/atlassian.svg" alt="Atlassian">
+                            <div class="cert-body">
+                                <h3>Version Control with Git</h3>
+                                <p class="cert-issuer">Atlassian</p>
+                            </div>
+                            <a class="cert-link" href="https://www.coursera.org/account/accomplishments/verify/S24W2OWTPDS5" target="_blank" rel="noopener">Ver credencial</a>
+                        </article>
+
+                        <article class="cert-card">
+                            <img class="cert-logo" src="img/certs/coursera.png" alt="Coursera">
+                            <div class="cert-body">
+                                <h3>Start Your API Testing Journey With Postman Tool</h3>
+                                <p class="cert-issuer">Coursera · Jul 2025</p>
+                            </div>
+                            <a class="cert-link" href="https://www.coursera.org/account/accomplishments/verify/4RSU1EE7PZPA" target="_blank" rel="noopener">Ver credencial</a>
+                        </article>
+
+                        <article class="cert-card">
+                            <img class="cert-logo" src="img/certs/desafiolatam.png" alt="Desafío Latam">
+                            <div class="cert-body">
+                                <h3>CSS Avanzado</h3>
+                                <p class="cert-issuer">Desafío Latam · Jul 2025</p>
+                            </div>
+                            <a class="cert-link" href="https://www.coursera.org/account/accomplishments/verify/muuuikrtmu" target="_blank" rel="noopener">Ver credencial</a>
+                        </article>
+
+                        <article class="cert-card">
+                            <img class="cert-logo" src="img/certs/desafiolatam.png" alt="Desafío Latam">
+                            <div class="cert-body">
+                                <h3>Bases de GIT, GITHUB</h3>
+                                <p class="cert-issuer">Desafío Latam</p>
+                            </div>
+                            <a class="cert-link" href="https://www.coursera.org/account/accomplishments/verify/gq8yqexah7" target="_blank" rel="noopener">Ver credencial</a>
+                        </article>
+
+                        <article class="cert-card">
+                            <img class="cert-logo" src="img/certs/ibm.png" alt="IBM">
+                            <div class="cert-body">
+                                <h3>Python for Data Science, AI &amp; Development</h3>
+                                <p class="cert-issuer">IBM · Feb 2024</p>
+                            </div>
+                            <a class="cert-link" href="https://www.coursera.org/account/accomplishments/verify/JGUJGMF8J7MA" target="_blank" rel="noopener">Ver credencial</a>
+                        </article>
+
+                        <article class="cert-card">
+                            <img class="cert-logo" src="img/certs/ibm.png" alt="IBM">
+                            <div class="cert-body">
+                                <h3>Python Project for Data Science</h3>
+                                <p class="cert-issuer">IBM · Nov 2023</p>
+                            </div>
+                            <a class="cert-link" href="https://www.coursera.org/account/accomplishments/verify/TL3W2NDSCN7Y" target="_blank" rel="noopener">Ver credencial</a>
+                        </article>
+
+                        <article class="cert-card">
+                            <img class="cert-logo" src="img/certs/meta.png" alt="Meta">
+                            <div class="cert-body">
+                                <h3>Database Structures and Management with MySQL</h3>
+                                <p class="cert-issuer">Meta · Ago 2025</p>
+                            </div>
+                            <a class="cert-link" href="https://www.coursera.org/account/accomplishments/verify/B4A1BAUFKOS6" target="_blank" rel="noopener">Ver credencial</a>
+                        </article>
+
+                        <article class="cert-card">
+                            <img class="cert-logo" src="img/certs/santander.png" alt="Santander Open Academy">
+                            <div class="cert-body">
+                                <h3>Introducción a la programación con Python</h3>
+                                <p class="cert-issuer">Santander Open Academy · Ago 2025</p>
+                            </div>
+                            <a class="cert-link" href="https://app.santanderopenacademy.com/es/course/introduction_to_python_programming" target="_blank" rel="noopener">Ver credencial</a>
+                        </article>
+
+                        <article class="cert-card">
+                            <img class="cert-logo" src="img/certs/austral.png" alt="Universidad Austral">
+                            <div class="cert-body">
+                                <h3>Excel aplicado a los negocios (Nivel Avanzado)</h3>
+                                <p class="cert-issuer">Universidad Austral, Argentina · Ago 2025</p>
+                            </div>
+                            <a class="cert-link" href="https://www.coursera.org/account/accomplishments/verify/H7EL09GO0FFK" target="_blank" rel="noopener">Ver credencial</a>
+                        </article>
+
+                        <article class="cert-card">
+                            <img class="cert-logo" src="img/certs/austral.png" alt="Universidad Austral">
+                            <div class="cert-body">
+                                <h3>Desarrollo del lado servidor: NodeJS, Express y MongoDB</h3>
+                                <p class="cert-issuer">Universidad Austral, Argentina · Jul 2025</p>
+                            </div>
+                            <a class="cert-link" href="https://www.coursera.org/account/accomplishments/verify/12O8R2629LGM" target="_blank" rel="noopener">Ver credencial</a>
+                        </article>
+
+                        <article class="cert-card">
+                            <img class="cert-logo" src="img/certs/austral.png" alt="Universidad Austral">
+                            <div class="cert-body">
+                                <h3>Introducción a la programación con Python</h3>
+                                <p class="cert-issuer">Universidad Austral, Argentina · Oct 2023</p>
+                            </div>
+                            <a class="cert-link" href="https://www.coursera.org/account/accomplishments/verify/W8GUNMXFKP7D" target="_blank" rel="noopener">Ver credencial</a>
+                        </article>
+
+                        <article class="cert-card">
+                            <img class="cert-logo" src="img/certs/ucdavis.png" alt="University of California, Davis">
+                            <div class="cert-body">
+                                <h3>Animation with JavaScript and jQuery</h3>
+                                <p class="cert-issuer">University of California, Davis</p>
+                            </div>
+                            <a class="cert-link" href="https://www.coursera.org/account/accomplishments/verify/BVONOLQ52CD7" target="_blank" rel="noopener">Ver credencial</a>
+                        </article>
+
+                        <article class="cert-card">
+                            <img class="cert-logo" src="img/certs/michigan.png" alt="University of Michigan">
+                            <div class="cert-body">
+                                <h3>Introduction to Structured Query Language (SQL)</h3>
+                                <p class="cert-issuer">University of Michigan · Ago 2025</p>
+                            </div>
+                            <a class="cert-link" href="https://www.coursera.org/account/accomplishments/verify/AHPNJPF1IOUU" target="_blank" rel="noopener">Ver credencial</a>
+                        </article>
+
+                        <article class="cert-card">
+                            <img class="cert-logo" src="img/certs/vanderbilt.svg" alt="Vanderbilt University">
+                            <div class="cert-body">
+                                <h3>Certificado de especialización Prompt Engineering</h3>
+                                <p class="cert-issuer">Vanderbilt University · Ago 2025</p>
+                            </div>
+                            <a class="cert-link" href="https://www.coursera.org/account/accomplishments/specialization/certificate/M3IZFWQKBVO1" target="_blank" rel="noopener">Ver credencial</a>
+                        </article>
+
+                        <article class="cert-card">
+                            <img class="cert-logo" src="img/certs/vanderbilt.svg" alt="Vanderbilt University">
+                            <div class="cert-body">
+                                <h3>Trustworthy Generative AI</h3>
+                                <p class="cert-issuer">Vanderbilt University · Ago 2025</p>
+                            </div>
+                            <a class="cert-link" href="https://www.coursera.org/account/accomplishments/verify/OLFS0JJS0WWX" target="_blank" rel="noopener">Ver credencial</a>
+                        </article>
+
+                        <article class="cert-card">
+                            <img class="cert-logo" src="img/certs/vanderbilt.svg" alt="Vanderbilt University">
+                            <div class="cert-body">
+                                <h3>ChatGPT Advanced Data Analysis</h3>
+                                <p class="cert-issuer">Vanderbilt University · Jul 2025</p>
+                            </div>
+                            <a class="cert-link" href="https://www.coursera.org/account/accomplishments/verify/AY1ND55Q1LHQ" target="_blank" rel="noopener">Ver credencial</a>
+                        </article>
+
+                        <article class="cert-card">
+                            <img class="cert-logo" src="img/certs/vanderbilt.svg" alt="Vanderbilt University">
+                            <div class="cert-body">
+                                <h3>Prompt Engineering for ChatGPT</h3>
+                                <p class="cert-issuer">Vanderbilt University · Jul 2025</p>
+                            </div>
+                            <a class="cert-link" href="https://www.coursera.org/account/accomplishments/verify/KKGHMIX8RQV6" target="_blank" rel="noopener">Ver credencial</a>
+                        </article>
+
+                        <article class="cert-card">
+                            <img class="cert-logo" src="img/certs/whizlabs.jpg" alt="Whizlabs">
+                            <div class="cert-body">
+                                <h3>Exam Prep PL-300: Microsoft Power BI Data Analyst Associate</h3>
+                                <p class="cert-issuer">Whizlabs · Ago 2025</p>
+                            </div>
+                            <a class="cert-link" href="https://www.coursera.org/account/accomplishments/verify/YNSK3PA25PON" target="_blank" rel="noopener">Ver credencial</a>
+                        </article>
+
+                        <article class="cert-card">
+                            <img class="cert-logo" src="img/certs/whizlabs.jpg" alt="Whizlabs">
+                            <div class="cert-body">
+                                <h3>Power BI: Data Analytics and Data Preparation</h3>
+                                <p class="cert-issuer">Whizlabs · Ago 2025</p>
+                            </div>
+                            <a class="cert-link" href="https://www.coursera.org/account/accomplishments/verify/C9PORBJ9QV9Q" target="_blank" rel="noopener">Ver credencial</a>
+                        </article>
+
+                        <article class="cert-card">
+                            <img class="cert-logo" src="img/certs/whizlabs.jpg" alt="Whizlabs">
+                            <div class="cert-body">
+                                <h3>Power BI: Data Modeling and Data Analysis</h3>
+                                <p class="cert-issuer">Whizlabs · Ago 2025</p>
+                            </div>
+                            <a class="cert-link" href="https://www.coursera.org/account/accomplishments/verify/JNVYLMR3QODE" target="_blank" rel="noopener">Ver credencial</a>
+                        </article>
+
+                        <article class="cert-card">
+                            <img class="cert-logo" src="img/certs/whizlabs.jpg" alt="Whizlabs">
+                            <div class="cert-body">
+                                <h3>Power BI: Data Secure, Governance, and Workspace Management</h3>
+                                <p class="cert-issuer">Whizlabs · Ago 2025</p>
+                            </div>
+                            <a class="cert-link" href="https://www.coursera.org/account/accomplishments/verify/A64RJZ8YGLUY" target="_blank" rel="noopener">Ver credencial</a>
+                        </article>
+
+                        <article class="cert-card">
+                            <img class="cert-logo" src="img/certs/whizlabs.jpg" alt="Whizlabs">
+                            <div class="cert-body">
+                                <h3>Power BI: Data Visualization and Analysis</h3>
+                                <p class="cert-issuer">Whizlabs · Ago 2025</p>
+                            </div>
+                            <a class="cert-link" href="https://www.coursera.org/account/accomplishments/verify/S6SGEVGIPC6I" target="_blank" rel="noopener">Ver credencial</a>
+                        </article>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contacto -->
+        <section id="contacto" class="section section-alt">
+            <div class="section-inner">
+                <span class="section-label">Contacto</span>
+                <h2 class="section-title">Conectemos.</h2>
+                <p class="section-subtitle">Descarga mi CV o escríbeme por cualquiera de estos canales.</p>
+
+                <div class="contact-grid">
+                    <article class="contact-cv-card">
+                        <div class="contact-cv-icon" aria-hidden="true">
+                            <svg width="28" height="28" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"/></svg>
+                        </div>
+                        <h3>Curriculum Vitae</h3>
+                        <p>PDF actualizado con experiencia profesional, stack técnico y formación.</p>
+                        <a href="cv/Rodrigo_Aravena_Cornejo.pdf" download class="btn btn-primary">
+                            <svg width="16" height="16" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"/></svg>
+                            Descargar CV
+                        </a>
+                    </article>
+
+                    <div class="contact-links">
+                        <a href="https://github.com/rodrigog898" target="_blank" rel="noopener" class="contact-link">
+                            <span class="contact-link-icon" aria-hidden="true">
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0 0 24 12c0-6.63-5.37-12-12-12z"/></svg>
+                            </span>
+                            <span class="contact-link-text">
+                                <strong>GitHub</strong>
+                                <span>rodrigog898</span>
+                            </span>
+                        </a>
+
+                        <a href="https://www.linkedin.com/in/rodrigo-alonso-aravena-cornejo-7b1219249/" target="_blank" rel="noopener" class="contact-link">
+                            <span class="contact-link-icon" aria-hidden="true">
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 114.127 0 2.062 2.062 0 01-2.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+                            </span>
+                            <span class="contact-link-text">
+                                <strong>LinkedIn</strong>
+                                <span>rodrigo-alonso-aravena-cornejo</span>
+                            </span>
+                        </a>
+
+                        <a href="mailto:ro.aravenac@gmail.com" class="contact-link">
+                            <span class="contact-link-icon" aria-hidden="true">
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="M22 7l-10 7L2 7"/></svg>
+                            </span>
+                            <span class="contact-link-text">
+                                <strong>Email</strong>
+                                <span>ro.aravenac@gmail.com</span>
+                            </span>
+                        </a>
+
+                        <button type="button" class="contact-link" data-copy-discord>
+                            <span class="contact-link-icon" aria-hidden="true">
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M20.317 4.37a19.791 19.791 0 00-4.885-1.515.074.074 0 00-.079.037c-.21.375-.444.864-.608 1.25a18.27 18.27 0 00-5.487 0 12.64 12.64 0 00-.617-1.25.077.077 0 00-.079-.037A19.736 19.736 0 003.677 4.37a.07.07 0 00-.032.027C.533 9.046-.32 13.58.099 18.057a.082.082 0 00.031.057 19.9 19.9 0 005.993 3.03.078.078 0 00.084-.028 14.09 14.09 0 001.226-1.994.076.076 0 00-.041-.106 13.107 13.107 0 01-1.872-.892.077.077 0 01-.008-.128 10.2 10.2 0 00.372-.292.074.074 0 01.077-.01c3.928 1.793 8.18 1.793 12.062 0a.074.074 0 01.078.01c.12.098.246.198.373.292a.077.077 0 01-.006.127 12.299 12.299 0 01-1.873.892.077.077 0 00-.041.107c.36.698.772 1.362 1.225 1.993a.076.076 0 00.084.028 19.839 19.839 0 006.002-3.03.077.077 0 00.032-.054c.5-5.177-.838-9.674-3.549-13.66a.061.061 0 00-.031-.03zM8.02 15.33c-1.183 0-2.157-1.085-2.157-2.419 0-1.333.956-2.419 2.157-2.419 1.21 0 2.176 1.096 2.157 2.42 0 1.333-.956 2.418-2.157 2.418zm7.975 0c-1.183 0-2.157-1.085-2.157-2.419 0-1.333.955-2.419 2.157-2.419 1.21 0 2.176 1.096 2.157 2.42 0 1.333-.946 2.418-2.157 2.418z"/></svg>
+                            </span>
+                            <span class="contact-link-text">
+                                <strong>Discord</strong>
+                                <span>.rodrigog</span>
+                            </span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
     </main>
 
-    <div class="gradient-fade"></div>
-<!-- Modal Proyectos -->
-  <div id="projectModal" class="modal" aria-hidden="true">
-    <div class="modal-dialog" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
-      <button class="modal-close" aria-label="Cerrar">&times;</button>
-
-      <div class="modal-grid">
-        <!-- Carrusel (izquierda) -->
-        <div class="carousel">
-          <button class="carousel-nav prev" aria-label="Imagen anterior">&#10094;</button>
-          <img id="carouselImage" alt="Imagen del proyecto" />
-          <button class="carousel-nav next" aria-label="Imagen siguiente">&#10095;</button>
-          <div class="carousel-dots" aria-label="Paginación de imágenes"></div>
+    <footer class="site-footer">
+        <div class="footer-inner">
+            <p class="footer-brand">Rodrigo Aravena</p>
+            <p class="footer-copy">© 2026 Rodrigo Aravena — Santiago, Chile</p>
+            <div class="footer-links">
+                <a href="cv/Rodrigo_Aravena_Cornejo.pdf" download>CV</a>
+                <a href="https://github.com/rodrigog898" target="_blank" rel="noopener">GitHub</a>
+                <a href="https://www.linkedin.com/in/rodrigo-alonso-aravena-cornejo-7b1219249/" target="_blank" rel="noopener">LinkedIn</a>
+                <a href="mailto:ro.aravenac@gmail.com">Email</a>
+                <button type="button" class="footer-discord" data-copy-discord>Discord</button>
+            </div>
         </div>
-
-        <!-- Detalles (derecha) -->
-        <div class="modal-details">
-          <h3 id="modalTitle" class="role" style="margin-bottom:.5rem;"></h3>
-          <p id="modalDesc" class="text-muted" style="line-height:1.75;"></p>
-
-          <div class="modal-cta">
-            <a id="modalLink" class="primary-button" target="_blank" rel="noopener">
-              Ir al proyecto
-              <svg width="16" height="16" fill="none" stroke="currentColor" viewBox="0 0 24 24" style="vertical-align:-2px;">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H7"/>
-              </svg>
-            </a>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-
+    </footer>
 </body>
 </html>

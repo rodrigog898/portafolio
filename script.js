@@ -51,18 +51,44 @@ navLinks.querySelectorAll('a').forEach(link => {
 const sections = document.querySelectorAll('section[id]');
 const navAnchors = document.querySelectorAll('.nav-links a');
 
-const navObserver = new IntersectionObserver((entries) => {
-    entries.forEach(entry => {
-        if (entry.isIntersecting) {
-            const id = entry.target.id;
-            navAnchors.forEach(a => {
-                a.classList.toggle('active', a.getAttribute('href') === `#${id}`);
-            });
+function getHeaderOffset() {
+    const value = getComputedStyle(document.documentElement).getPropertyValue('--header-h');
+    return (parseInt(value, 10) || 68) + 40;
+}
+
+function updateActiveNav() {
+    const fromTop = getHeaderOffset();
+    let currentId = '';
+
+    sections.forEach(section => {
+        if (section.getBoundingClientRect().top <= fromTop) {
+            currentId = section.id;
         }
     });
-}, { threshold: 0.3, rootMargin: '-80px 0px -40% 0px' });
 
-sections.forEach(s => navObserver.observe(s));
+    if (window.innerHeight + window.scrollY >= document.documentElement.scrollHeight - 2) {
+        currentId = sections[sections.length - 1].id;
+    }
+
+    navAnchors.forEach(a => {
+        a.classList.toggle('active', a.getAttribute('href') === `#${currentId}`);
+    });
+}
+
+let navTicking = false;
+
+function onScrollNav() {
+    if (navTicking) return;
+    navTicking = true;
+    requestAnimationFrame(() => {
+        updateActiveNav();
+        navTicking = false;
+    });
+}
+
+updateActiveNav();
+window.addEventListener('scroll', onScrollNav, { passive: true });
+window.addEventListener('resize', updateActiveNav);
 
 // ===== Fade-in Animations =====
 const fadeEls = document.querySelectorAll(
